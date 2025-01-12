@@ -62,7 +62,7 @@ header {
     }
 
     input {
-        /* display: none; */
+        display: none;
     }
 
     h2 {
@@ -97,6 +97,7 @@ main {
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255,211,218,1) 50%);
 
     .sidebar {
+        display: none;
         position: absolute;
         right: 0;
 
