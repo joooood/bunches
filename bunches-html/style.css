@@ -1,0 +1,120 @@
+:root {
+
+    /* COLOURS */
+    --clr-neutral-white-000: #FFFFFF;
+    --clr-neutral-black-999: #000000;
+
+    --clr-accent-pink-500: #e76b8e;
+
+    /* FONTS */
+    --ff-default: 'Rozha One', serif;
+    --ff-quotes: 'Dancing Script', serif;
+
+    --fw-bold: 600;
+    --fw-semi-bold: 500;
+    --fw-regular: 400;
+    --fw-thin: 300;
+
+    --fs-heading: calc(30vw - (20vw - 5rem));
+    --fs-sub-heading: 3rem;
+    --fs-label: 1.5rem;
+    --fs-paragraph: 1rem;
+    --fs-fine-print: 0.5rem;
+
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg {
+    display: block;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    font-family: var(--ff-default);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-regular);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 2.5%;
+    left: 5%;
+
+    width: 90%;
+    height: 5%;
+
+    a {
+        color: black;
+        text-decoration: none;
+        filter: invert(69%) sepia(29%) saturate(5273%) hue-rotate(303deg) brightness(96%) contrast(89%);
+        min-height: 2.5rem;
+    }
+}
+
+main {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255,211,218,1) 50%);
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        width: inherit;
+        height: inherit;
+        min-height: 700px;
+
+        .hero-img-wrapper {
+            position: relative;
+            width: calc( 95% - (75% - 342px) );
+
+            h1 {
+                position: absolute;
+
+                font-size: var(--fs-heading);
+                color: var(--clr-accent-pink-500);
+            }
+
+            h1:nth-child(1) {
+                top: 12.5%;e
+                left: -50%;
+            }
+
+            h1:nth-child(2) {
+                bottom: 12.5%;
+                right: -70%;
+            }
+        }
+    }
+
+}
