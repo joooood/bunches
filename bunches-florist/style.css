@@ -109,6 +109,17 @@ main {
 
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255,211,218,1) 50%);
 
+    .sidebar {
+        position: absolute;
+        right: 0;
+
+        width: 27.5vw;
+        height: 100%;
+        background: white;
+
+        z-index: 999;
+    }
+
     .hero {
         position: absolute;
         left: 33%;
