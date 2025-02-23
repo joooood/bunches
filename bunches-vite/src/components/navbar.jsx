@@ -4,7 +4,7 @@ import "./navbar.css";
 function SideMenu() {
   return (
     <>
-      <div className="profile-cart flex h-full ml-auto gap-5 p-5 filter-(--pink-logo)">
+      <div className="profile-cart flex h-full ml-auto gap-5 filter-(--dark-pink-logo)">
         <label for="cart">
           <input
             type="checkbox"
@@ -30,18 +30,25 @@ function SideMenu() {
           />
         </label>
       </div>
-
-      <aside className="sidemenu"></aside>
     </>
   );
 }
 
 function Navbar() {
   return (
-    <div className="flex items-center fixed w-screen h-20 px-5">
-      <p className="title font-display font-black text-[#e76b8e] text-2xl">
+    <div className="navbar flex justify-between items-center fixed w-screen h-(--navbar-height) px-10 py-5 z-999">
+      <img
+        className="h-full filter-(--dark-pink-logo) animate-spin"
+        id="flower"
+        src="https://www.svgrepo.com/show/357793/flower.svg"
+        alt=""
+      />
+      <a
+        href=""
+        className="title font-display font-black text-(--custom-dark-pink) text-2xl pl-15"
+      >
         bunches.
-      </p>
+      </a>
       <SideMenu />
     </div>
   );

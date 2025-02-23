@@ -1,9 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Playfair Display", serif;
+  --font-display: "Kalnia", serif;
+  /* --font-display: "DM Serif Display", serif; */
+  /* --font-display: "Koh Santepheap", serif; */
+  --heading-size: 11vw;
+  --leading-size: calc(var(--heading-size) + 5rem);
 
-  --pink-logo: invert(70%) sepia(66%) saturate(3358%) hue-rotate(303deg) brightness(94%) contrast(91%);
+  --navbar-height: calc(var(--spacing) * 20);
+
+  --custom-pink: rgba(255, 211, 218, 1);
+  --custom-pink-50: rgba(255, 211, 218, 0.5);
+  --custom-pink-25: rgba(255, 211, 218, 0.25);
+
+  --custom-dark-pink: rgba(231, 107, 142, 1);
+  --custom-dark-pink-50: rgba(231, 107, 142, 0.5);
+  --custom-dark-pink-25: rgba(231, 107, 142, 0.25);
+
+  --custom-plum: rgba(144, 54, 82, 1);
+  --custom-plum-50: rgba(144, 54, 82, 0.5);
+  --custom-plum-25: rgba(144, 54, 82, 0.25);
+
+  --pink-logo: invert(70%) sepia(49%) saturate(227%) hue-rotate(306deg)
+    brightness(115%) contrast(103%);
+  --dark-pink-logo: invert(70%) sepia(66%) saturate(3358%) hue-rotate(303deg)
+    brightness(94%) contrast(91%);
+  --plum-logo: invert(29%) sepia(6%) saturate(6730%) hue-rotate(292deg)
+    brightness(92%) contrast(89%);
 }
 
 :root {
@@ -11,66 +34,65 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+* {
+  margin: 0;
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
